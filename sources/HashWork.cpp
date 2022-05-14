@@ -1,6 +1,5 @@
-//
-// Created by ubuntu on 5/10/22.
-//
+// Copyright 2022 Evgenzayts evgenzaytsev2002@yandex.ru
+
 #include "HashWork.hpp"
 
 std::vector<unsigned char>& GetRandDataVector() {

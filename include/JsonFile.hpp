@@ -1,14 +1,14 @@
-//
-// Created by ubuntu on 5/10/22.
-//
-#ifndef INCLUDE_JSONFILE_HPP
-#define INCLUDE_JSONFILE_HPP
+// Copyright 2022 Evgenzayts evgenzaytsev2002@yandex.ru
+
+#ifndef INCLUDE_JSONFILE_HPP_
+#define INCLUDE_JSONFILE_HPP_
 
 #include <nlohmann/json.hpp>
 #include <iostream>
 #include <ctime>
 #include <mutex>
 #include <fstream>
+#include <string>
 
 struct JsonData{
   std::time_t timestamp;
@@ -40,4 +40,4 @@ class JsonFile {
   ~JsonFile() = default;
 };
 
-#endif  // INCLUDE_JSONFILE_HPP
+#endif  // INCLUDE_JSONFILE_HPP_

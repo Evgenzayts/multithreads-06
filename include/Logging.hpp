@@ -1,9 +1,7 @@
-//
-// Created by ubuntu on 5/10/22.
-//
+// Copyright 2022 Evgenzayts evgenzaytsev2002@yandex.ru
 
-#ifndef INCLUDE_LOGGING_HPP
-#define INCLUDE_LOGGING_HPP
+#ifndef INCLUDE_LOGGING_HPP_
+#define INCLUDE_LOGGING_HPP_
 
 #include <boost/log/sinks.hpp>
 #include <boost/log/trivial.hpp>
@@ -18,4 +16,4 @@ namespace keywords = boost::log::keywords;
 void LogPrint(const std::vector<unsigned char>& data_vector, JsonFile& log_file);
 void LogSet();
 
-#endif  // INCLUDE_LOGGING_HPP
+#endif  // INCLUDE_LOGGING_HPP_

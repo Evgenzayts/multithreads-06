@@ -1,6 +1,5 @@
-//
-// Created by ubuntu on 5/10/22.
-//
+// Copyright 2022 Evgenzayts evgenzaytsev2002@yandex.ru
+
 #include "JsonFile.hpp"
 
 JsonFile& JsonFile::operator=(const JsonData& one_data) {
