@@ -45,7 +45,15 @@ add_executable(demo
         )
 
 add_library(${PROJECT_NAME} STATIC
-        include/JsonFile.hpp sources/JsonFile.cpp include/Logging.hpp sources/Logging.cpp include/HashWork.hpp sources/HashWork.cpp tests/example.cpp sources/example.cpp include/example.hpp)
+        include/JsonFile.hpp
+        sources/JsonFile.cpp
+        include/Logging.hpp
+        sources/Logging.cpp
+        include/HashWork.hpp
+        sources/HashWork.cpp
+        include/example.hpp
+        tests/example.cpp
+        sources/example.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
         "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
@@ -57,6 +65,7 @@ target_include_directories(${PROJECT_NAME}
         ${CMAKE_CURRENT_SOURCE_DIR}/third-party/PicoSHA2
         )
 target_link_libraries(demo ${PROJECT_NAME})
+target_link_libraries(tests ${PROJECT_NAME})
 target_link_libraries(${PROJECT_NAME}
         Boost::log_setup
         Boost::log

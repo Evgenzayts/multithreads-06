@@ -2,9 +2,7 @@
 
 #include <stdexcept>
 #include <thread>
-
 #include <gtest/gtest.h>
-
 #include <example.hpp>
 
 TEST(Example, EmptyTest) {
