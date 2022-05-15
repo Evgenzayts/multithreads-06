@@ -45,8 +45,7 @@ add_executable(demo
         )
 
 add_library(${PROJECT_NAME} STATIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/example.cpp
-        include/example.hpp include/JsonFile.hpp sources/JsonFile.cpp include/Logging.hpp sources/Logging.cpp include/HashWork.hpp sources/HashWork.cpp)
+        include/JsonFile.hpp sources/JsonFile.cpp include/Logging.hpp sources/Logging.cpp include/HashWork.hpp sources/HashWork.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
         "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
