@@ -12,7 +12,7 @@ void JsonFile::add_record(const JsonData& data) {
   std::lock_guard<std::mutex> lk(_mute);
 
   nlohmann::json json_record;
-  json_record["timestamp"] = int(data.timestamp);
+  json_record["timestamp"] = static_cast<int>(data.timestamp);
   json_record["hash"] = data.hash;
   json_record["data"] = data.data;
 
