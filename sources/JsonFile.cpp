@@ -25,6 +25,8 @@ void JsonFile::save_data() {
   }
   file << _data.dump(4);
   file.close();
+
+  std::cout << std::endl << "Saved in json: " << _path << std::endl;
 }
 void JsonFile::set_path(char* path) {
   _path = path;

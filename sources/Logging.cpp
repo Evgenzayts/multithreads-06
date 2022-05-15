@@ -1,7 +1,6 @@
 // Copyright 2022 Evgenzayts evgenzaytsev2002@yandex.ru
 
 #include "Logging.hpp"
-#include <chrono>
 
 void LogPrint(const std::vector<unsigned char>& data_vector,
               JsonFile& log_file) {
@@ -10,9 +9,7 @@ void LogPrint(const std::vector<unsigned char>& data_vector,
 
   if (CmpHash(hash)) {
     BOOST_LOG_TRIVIAL(info) << "[" << str << "] " << hash;
-    std::time_t timestamp =
-        std::chrono::duration_cast<std::chrono::milliseconds>(
-            std::chrono::system_clock::now().time_since_epoch()).count();
+    std::time_t timestamp(std::time(nullptr));
     log_file.add_record(JsonData(timestamp, hash, str));
   }
   BOOST_LOG_TRIVIAL(trace) << "[" << str << "] " << hash;
