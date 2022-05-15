@@ -39,13 +39,13 @@ find_package(nlohmann_json CONFIG REQUIRED)
 
 add_executable(tests
         ${CMAKE_CURRENT_SOURCE_DIR}/tests/example.cpp
-        )
+        tests/example.cpp)
 add_executable(demo
         ${CMAKE_CURRENT_SOURCE_DIR}/demo/main.cpp
         )
 
 add_library(${PROJECT_NAME} STATIC
-        include/JsonFile.hpp sources/JsonFile.cpp include/Logging.hpp sources/Logging.cpp include/HashWork.hpp sources/HashWork.cpp)
+        include/JsonFile.hpp sources/JsonFile.cpp include/Logging.hpp sources/Logging.cpp include/HashWork.hpp sources/HashWork.cpp tests/example.cpp sources/example.cpp include/example.hpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
         "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
